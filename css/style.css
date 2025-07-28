@@ -1,0 +1,36 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.btn-filter {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin: 5px;
+}
+
+.btn-filter.active {
+    background-color: #c60c30;
+    color: white;
+    border-color: #c60c30;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}

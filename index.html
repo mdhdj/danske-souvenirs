@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danske Souvenirs | Unikke Gaver fra Danmark</title>
+    <meta name="description" content="Udforsk vores bred vifte af danske souvenirs og gaver inspireret af danske byer og kultur. Perfekte som souvenir eller gave.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/dk.svg" width="30" height="20" class="me-2" alt="Dansk flag">
+                Danske Souvenirs
+            </a>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <button class="btn btn-filter active" data-filter="all">Alle Produkter</button>
+                <button class="btn btn-filter" data-filter="t-shirts">T-shirts</button>
+                <button class="btn btn-filter" data-filter="klistermærker">Klistermærker</button>
+                <button class="btn btn-filter" data-filter="plakater">Plakater</button>
+                <button class="btn btn-filter" data-filter="nøgleringe">Nøgleringe</button>
+                <button class="btn btn-filter" data-filter="postkort">Postkort</button>
+            </div>
+            
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" id="searchInput" placeholder="Søg efter produkter...">
+            </div>
+            
+            <div class="row g-4" id="productGrid">
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/denmark_travel_vintage_t_shirt-rb8071fdbc046460db8d3027ce1e426ac_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Denmark Travel Vintage T-Shirt">
+                        <div class="card-body">
+                            <h3 class="card-title">Denmark Travel Vintage T-Shirt</h3>
+                            <p class="card-text text-muted">t-shirts | Danmark</p>
+                            <a href="products/danmark-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/denmark_travel_vintage_sticker-rce37abe531424f858786aae779ac2c5e_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Denmark Travel Vintage Sticker">
+                        <div class="card-body">
+                            <h3 class="card-title">Denmark Travel Vintage Sticker</h3>
+                            <p class="card-text text-muted">klistermærker | Danmark</p>
+                            <a href="products/danmark-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/denmark_travel_vintage_keychain-r9a472544cca54fb295cfd6c80e476bed_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Denmark Travel Vintage Keychain">
+                        <div class="card-body">
+                            <h3 class="card-title">Denmark Travel Vintage Keychain</h3>
+                            <p class="card-text text-muted">nøgleringe | Danmark</p>
+                            <a href="products/danmark-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/slagelse_denmark_tower_keychain-r44d88c268c4f49a6be5457f610561f4a_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Slagelse Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Slagelse Denmark Tower</h3>
+                            <p class="card-text text-muted">nøgleringe | Slagelse</p>
+                            <a href="products/slagelse-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/viborg_denmark_cathedral_poster-r6132ef9c3db84b5ea549aa9fc43497ba_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Viborg Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Viborg Denmark Cathedral</h3>
+                            <p class="card-text text-muted">plakater | Viborg</p>
+                            <a href="products/viborg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/vejle_denmark_bridge_poster-r82f3d754cd24444eb1cbe578536f1224_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Vejle Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Vejle Denmark Bridge</h3>
+                            <p class="card-text text-muted">plakater | Vejle</p>
+                            <a href="products/vejle-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/taastrup_denmark_tower_poster-rebebb9e21c204ce394ef1f983fafc42c_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Taastrup Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Taastrup Denmark Tower</h3>
+                            <p class="card-text text-muted">plakater | Taastrup</p>
+                            <a href="products/taastrup-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/svendborg_denmark_castle_poster-r2b053feed0a542abb8c81bbec23fe866_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Svendborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Svendborg Denmark Castle</h3>
+                            <p class="card-text text-muted">plakater | Svendborg</p>
+                            <a href="products/svendborg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/sonderborg_denmark_castle_poster-r65dfc17f31c4475f97bc11538069bdf8_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Sønderborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Sønderborg Denmark Castle</h3>
+                            <p class="card-text text-muted">plakater | Sønderborg</p>
+                            <a href="products/sonderborg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/slagelse_denmark_tower_poster-rbf5cfd6b2a5646388a5aafb41b214bd5_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Slagelse Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Slagelse Denmark Tower</h3>
+                            <p class="card-text text-muted">plakater | Slagelse</p>
+                            <a href="products/slagelse-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/silkeborg_denmark_lake_poster-r5079ca09beb6461ead870b8d043734a5_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Silkeborg Denmark Lake">
+                        <div class="card-body">
+                            <h3 class="card-title">Silkeborg Denmark Lake</h3>
+                            <p class="card-text text-muted">plakater | Silkeborg</p>
+                            <a href="products/silkeborg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/roskilde_denmark_cathedral_poster-r6b69f85d406e4f84847c876a0f6143a0_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Roskilde Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Roskilde Denmark Cathedral</h3>
+                            <p class="card-text text-muted">plakater | Roskilde</p>
+                            <a href="products/roskilde-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/randers_denmark_domes_poster-rc3558491f6a64388baf33b5eed06a8c0_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Randers Denmark Domes">
+                        <div class="card-body">
+                            <h3 class="card-title">Randers Denmark Domes</h3>
+                            <p class="card-text text-muted">plakater | Randers</p>
+                            <a href="products/randers-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/odense_denmark_literary_poster-r96c95caefc554ca4b8eb78842874f14e_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Odense Denmark Literary">
+                        <div class="card-body">
+                            <h3 class="card-title">Odense Denmark Literary</h3>
+                            <p class="card-text text-muted">plakater | Odense</p>
+                            <a href="products/odense-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/norresundby_denmark_bridge_poster-ra86900cd551d481ba6c7619fd8102fc0_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Nørresundby Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Nørresundby Denmark Bridge</h3>
+                            <p class="card-text text-muted">plakater | Nørresundby</p>
+                            <a href="products/norresundby-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/naestved_denmark_church_poster-r12c9298d3dd64e3ab8d3fae499d04211_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Næstved Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Næstved Denmark Church</h3>
+                            <p class="card-text text-muted">plakater | Næstved</p>
+                            <a href="products/nastved-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kolding_denmark_castle_poster-r599e052fefa645b9bf06cbbb60d51af8_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Kolding Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Kolding Denmark Castle</h3>
+                            <p class="card-text text-muted">plakater | Kolding</p>
+                            <a href="products/kolding-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/koge_denmark_old_town_poster-r7acd4743bdc147a48079b267d0be0df9_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Køge Denmark Old Town">
+                        <div class="card-body">
+                            <h3 class="card-title">Køge Denmark Old Town</h3>
+                            <p class="card-text text-muted">plakater | Køge</p>
+                            <a href="products/koge-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kobenhavn_nyhavn_harbor_poster-r5d76d623726a49c0aafeaebf3e289951_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="København Nyhavn Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">København Nyhavn Harbor</h3>
+                            <p class="card-text text-muted">plakater | København</p>
+                            <a href="products/kobenhavn-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/viborg_denmark_cathedral_postcard-r16c25675f1ef446ba7761927fee45f8f_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Viborg Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Viborg Denmark Cathedral</h3>
+                            <p class="card-text text-muted">postkort | Viborg</p>
+                            <a href="products/viborg-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/vejle_denmark_bridge_postcard-r72e20da32e884b1ab1a75a1922b5bad8_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Vejle Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Vejle Denmark Bridge</h3>
+                            <p class="card-text text-muted">postkort | Vejle</p>
+                            <a href="products/vejle-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/taastrup_denmark_tower_postcard-r4c78828db9d146938158249d92dd2ab5_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Taastrup Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Taastrup Denmark Tower</h3>
+                            <p class="card-text text-muted">postkort | Taastrup</p>
+                            <a href="products/taastrup-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/svendborg_denmark_castle_postcard-r3986d802f04944b584397488f84dceea_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Svendborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Svendborg Denmark Castle</h3>
+                            <p class="card-text text-muted">postkort | Svendborg</p>
+                            <a href="products/svendborg-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/roskilde_denmark_cathedral_postcard-ra206d426c0d84298a5e406675af83801_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Roskilde Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Roskilde Denmark Cathedral</h3>
+                            <p class="card-text text-muted">postkort | Roskilde</p>
+                            <a href="products/roskilde-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/randers_denmark_domes_postcard-r49f2b710fa864d6b9f7ae0dfc463d335_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Randers Denmark Domes">
+                        <div class="card-body">
+                            <h3 class="card-title">Randers Denmark Domes</h3>
+                            <p class="card-text text-muted">postkort | Randers</p>
+                            <a href="products/randers-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/odense_denmark_literary_postcard-rb295043119fc406a8be69102c614a2be_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Odense Denmark Literary">
+                        <div class="card-body">
+                            <h3 class="card-title">Odense Denmark Literary</h3>
+                            <p class="card-text text-muted">postkort | Odense</p>
+                            <a href="products/odense-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/norresundby_denmark_bridge_postcard-rc8dcadaaa6634ac192c814d3bb17b3a7_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Nørresundby Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Nørresundby Denmark Bridge</h3>
+                            <p class="card-text text-muted">postkort | Nørresundby</p>
+                            <a href="products/norresundby-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/naestved_denmark_church_postcard-r4bb9375cc49f49e5866a0bb2f0305a47_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Næstved Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Næstved Denmark Church</h3>
+                            <p class="card-text text-muted">postkort | Næstved</p>
+                            <a href="products/nastved-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kolding_denmark_castle_postcard-r90cb951b24504550bf14d89b5c11412f_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Kolding Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Kolding Denmark Castle</h3>
+                            <p class="card-text text-muted">postkort | Kolding</p>
+                            <a href="products/kolding-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/koge_denmark_old_town_postcard-ref68dcb7dc3c4550826f8cc19ae0d313_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Køge Denmark Old Town">
+                        <div class="card-body">
+                            <h3 class="card-title">Køge Denmark Old Town</h3>
+                            <p class="card-text text-muted">postkort | Køge</p>
+                            <a href="products/koge-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kobenhavn_nyhavn_harbor_postcard-r50252d22146046d9a1d9d1fe2b985de4_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="København Nyhavn Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">København Nyhavn Harbor</h3>
+                            <p class="card-text text-muted">postkort | København</p>
+                            <a href="products/kobenhavn-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsholm_denmark_church_poster-r29f2819e120e4b0b81d782a8351aa0b4_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Hørsholm Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hørsholm Denmark Church</h3>
+                            <p class="card-text text-muted">plakater | Hørsholm</p>
+                            <a href="products/horsholm-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsens_denmark_harbor_poster-r15d1f2c03e8b4c70926a79055a61ea8a_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Horsens Denmark Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">Horsens Denmark Harbor</h3>
+                            <p class="card-text text-muted">plakater | Horsens</p>
+                            <a href="products/horsens-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/holstebro_denmark_giacometti_poster-r57ef6b82fdf44659b636cca080d99051_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Holstebro Denmark Giacometti">
+                        <div class="card-body">
+                            <h3 class="card-title">Holstebro Denmark Giacometti</h3>
+                            <p class="card-text text-muted">plakater | Holstebro</p>
+                            <a href="products/holstebro-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hjorring_denmark_church_poster-r382fe6857a154b23add7429d210d9490_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Hjørring Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hjørring Denmark Church</h3>
+                            <p class="card-text text-muted">plakater | Hjørring</p>
+                            <a href="products/hjorring-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hillerod_castle_denmark_poster-r31c7124c275940d1acd5279a59c14c9b_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Hillerød Castle Denmark">
+                        <div class="card-body">
+                            <h3 class="card-title">Hillerød Castle Denmark</h3>
+                            <p class="card-text text-muted">plakater | Hillerød</p>
+                            <a href="products/hillerod-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/herning_denmark_modern_art_poster-rdcaeb8acab4643c5bedc256b42b32c94_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Herning Denmark Modern Art">
+                        <div class="card-body">
+                            <h3 class="card-title">Herning Denmark Modern Art</h3>
+                            <p class="card-text text-muted">plakater | Herning</p>
+                            <a href="products/herning-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/fredericia_denmark_soldier_poster-r3de47dbd8af249e1ac99b840edcb6dbe_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Fredericia Denmark Soldier">
+                        <div class="card-body">
+                            <h3 class="card-title">Fredericia Denmark Soldier</h3>
+                            <p class="card-text text-muted">plakater | Fredericia</p>
+                            <a href="products/fredericia-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/esbjerg_man_meets_sea_poster-r9b50e76ebcea49a5a1e6c9ddcd6b795a_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Esbjerg Man Meets Sea">
+                        <div class="card-body">
+                            <h3 class="card-title">Esbjerg Man Meets Sea</h3>
+                            <p class="card-text text-muted">plakater | Esbjerg</p>
+                            <a href="products/esbjerg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/denmark_castle_windmill_poster-r98f656e888264cb5adeb36caf3e15f10_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Denmark Castle Windmill">
+                        <div class="card-body">
+                            <h3 class="card-title">Denmark Castle Windmill</h3>
+                            <p class="card-text text-muted">plakater | Danmark</p>
+                            <a href="products/danmark-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aarhus_denmark_cityscape_poster-raeaf3f678643492988478fd547866be9_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Aarhus Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aarhus Denmark Cityscape</h3>
+                            <p class="card-text text-muted">plakater | Aarhus</p>
+                            <a href="products/aarhus-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsholm_denmark_church_postcard-r42459c5896d64b56b397887f0d31d7c7_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Hørsholm Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hørsholm Denmark Church</h3>
+                            <p class="card-text text-muted">postkort | Hørsholm</p>
+                            <a href="products/horsholm-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsens_denmark_harbor_postcard-rb9d1a3a01725482491be88e9af11a95f_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Horsens Denmark Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">Horsens Denmark Harbor</h3>
+                            <p class="card-text text-muted">postkort | Horsens</p>
+                            <a href="products/horsens-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/holstebro_denmark_giacometti_postcard-r3cd9513bd7e146498f5107c2b4132191_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Holstebro Denmark Giacometti">
+                        <div class="card-body">
+                            <h3 class="card-title">Holstebro Denmark Giacometti</h3>
+                            <p class="card-text text-muted">postkort | Holstebro</p>
+                            <a href="products/holstebro-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hjorring_denmark_church_postcard-r7fdb475735ef46c79a346b9504c015cc_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Hjørring Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hjørring Denmark Church</h3>
+                            <p class="card-text text-muted">postkort | Hjørring</p>
+                            <a href="products/hjorring-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hillerod_castle_denmark_postcard-r806cb36384be42a2817da122c00cd6cf_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Hillerød Castle Denmark">
+                        <div class="card-body">
+                            <h3 class="card-title">Hillerød Castle Denmark</h3>
+                            <p class="card-text text-muted">postkort | Hillerød</p>
+                            <a href="products/hillerod-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/herning_denmark_modern_art_postcard-r840a01078223497aa4c220469a45d325_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Herning Denmark Modern Art">
+                        <div class="card-body">
+                            <h3 class="card-title">Herning Denmark Modern Art</h3>
+                            <p class="card-text text-muted">postkort | Herning</p>
+                            <a href="products/herning-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/fredericia_denmark_soldier_postcard-rd53f5b58e51a40789a5c9d83c6effac5_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Fredericia Denmark Soldier">
+                        <div class="card-body">
+                            <h3 class="card-title">Fredericia Denmark Soldier</h3>
+                            <p class="card-text text-muted">postkort | Fredericia</p>
+                            <a href="products/fredericia-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/esbjerg_man_meets_sea_postcard-r2b163f99d90a42ffa03223c3ee8e1f66_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Esbjerg Man Meets Sea">
+                        <div class="card-body">
+                            <h3 class="card-title">Esbjerg Man Meets Sea</h3>
+                            <p class="card-text text-muted">postkort | Esbjerg</p>
+                            <a href="products/esbjerg-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/denmark_castle_windmill_postcard-rac1cd8e675634fb9b75467b4ce580cba_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Denmark Castle Windmill">
+                        <div class="card-body">
+                            <h3 class="card-title">Denmark Castle Windmill</h3>
+                            <p class="card-text text-muted">postkort | Danmark</p>
+                            <a href="products/danmark-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aarhus_denmark_cityscape_postcard-r712767e0866d4e6495c2241c04fc469f_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Aarhus Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aarhus Denmark Cityscape</h3>
+                            <p class="card-text text-muted">postkort | Aarhus</p>
+                            <a href="products/aarhus-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="plakater">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aalborg_denmark_cityscape_poster-r2a130065bc4b490e917c3fb6f069540f_0hbc3_8byvr_1024.jpg?max_dim=325" class="card-img-top" alt="Aalborg Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aalborg Denmark Cityscape</h3>
+                            <p class="card-text text-muted">plakater | Aalborg</p>
+                            <a href="products/aalborg-danmark-plakater.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="postkort">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aalborg_denmark_cityscape_postcard-r7cdd08d1736149eb96bbd59f540da104_qohwd_1024.jpg?max_dim=325" class="card-img-top" alt="Aalborg Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aalborg Denmark Cityscape</h3>
+                            <p class="card-text text-muted">postkort | Aalborg</p>
+                            <a href="products/aalborg-danmark-postkort.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/vejle_denmark_bridge_keychain-r883585b0a0964c748a562472d83178be_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Vejle Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Vejle Denmark Bridge</h3>
+                            <p class="card-text text-muted">nøgleringe | Vejle</p>
+                            <a href="products/vejle-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aalborg_denmark_cityscape_keychain-r70e5c16a4c874e148797c88935d7ab12_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Aalborg Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aalborg Denmark Cityscape</h3>
+                            <p class="card-text text-muted">nøgleringe | Aalborg</p>
+                            <a href="products/aalborg-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aarhus_denmark_cityscape_keychain-r4c3585fe7c7148319290172d6c784b05_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Aarhus Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aarhus Denmark Cityscape</h3>
+                            <p class="card-text text-muted">nøgleringe | Aarhus</p>
+                            <a href="products/aarhus-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/esbjerg_man_meets_sea_keychain-r71bf851a94ed4040842b89d7c9160c35_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Esbjerg Man Meets Sea">
+                        <div class="card-body">
+                            <h3 class="card-title">Esbjerg Man Meets Sea</h3>
+                            <p class="card-text text-muted">nøgleringe | Esbjerg</p>
+                            <a href="products/esbjerg-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/fredericia_denmark_soldier_keychain-r3755b00719d9495ba296c7e37b49f79e_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Fredericia Denmark Soldier">
+                        <div class="card-body">
+                            <h3 class="card-title">Fredericia Denmark Soldier</h3>
+                            <p class="card-text text-muted">nøgleringe | Fredericia</p>
+                            <a href="products/fredericia-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/koge_denmark_old_town_keychain-r06b9f2e5a2a644fc8b7f9ecca5c9791c_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Køge Denmark Old Town">
+                        <div class="card-body">
+                            <h3 class="card-title">Køge Denmark Old Town</h3>
+                            <p class="card-text text-muted">nøgleringe | Køge</p>
+                            <a href="products/koge-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kobenhavn_nyhavn_harbor_keychain-r4b0b0d54472a4774b12705f1c0940008_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="København Nyhavn Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">København Nyhavn Harbor</h3>
+                            <p class="card-text text-muted">nøgleringe | København</p>
+                            <a href="products/kobenhavn-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsens_denmark_harbor_keychain-r73bc929c166d444e9f4be6974249e678_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Horsens Denmark Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">Horsens Denmark Harbor</h3>
+                            <p class="card-text text-muted">nøgleringe | Horsens</p>
+                            <a href="products/horsens-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsens_denmark_harbor_sticker-r85c5757adc6c4aec95b01fb69b7afb09_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Horsens Denmark Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">Horsens Denmark Harbor</h3>
+                            <p class="card-text text-muted">klistermærker | Horsens</p>
+                            <a href="products/horsens-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/holstebro_denmark_giacometti_keychain-r4906fe1f6bf547c080a0e9eef06190f1_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Holstebro Denmark Giacometti">
+                        <div class="card-body">
+                            <h3 class="card-title">Holstebro Denmark Giacometti</h3>
+                            <p class="card-text text-muted">nøgleringe | Holstebro</p>
+                            <a href="products/holstebro-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hjorring_denmark_church_keychain-r53c1c86476b54075af23d37420eed24b_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hjørring Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hjørring Denmark Church</h3>
+                            <p class="card-text text-muted">nøgleringe | Hjørring</p>
+                            <a href="products/hjorring-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hillerod_castle_denmark_keychain-ra1e66719e81a43dcae1bbc9589847ce5_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hillerød Castle Denmark">
+                        <div class="card-body">
+                            <h3 class="card-title">Hillerød Castle Denmark</h3>
+                            <p class="card-text text-muted">nøgleringe | Hillerød</p>
+                            <a href="products/hillerod-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/herning_denmark_modern_art_keychain-r33390e9eaf7e43ca8f79a0dc96272fb7_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Herning Denmark Modern Art">
+                        <div class="card-body">
+                            <h3 class="card-title">Herning Denmark Modern Art</h3>
+                            <p class="card-text text-muted">nøgleringe | Herning</p>
+                            <a href="products/herning-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kolding_denmark_castle_keychain-r290cd90ea46e4271a4cbc9901a7e80d7_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Kolding Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Kolding Denmark Castle</h3>
+                            <p class="card-text text-muted">nøgleringe | Kolding</p>
+                            <a href="products/kolding-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/naestved_denmark_church_keychain-r0319aa7769154c5e8416956349f45146_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Næstved Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Næstved Denmark Church</h3>
+                            <p class="card-text text-muted">nøgleringe | Næstved</p>
+                            <a href="products/nastved-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/norresundby_denmark_bridge_keychain-rd4084eca1d5e48929d6684bfd68642ae_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Nørresundby Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Nørresundby Denmark Bridge</h3>
+                            <p class="card-text text-muted">nøgleringe | Nørresundby</p>
+                            <a href="products/norresundby-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/odense_denmark_literary_keychain-rc7a0bb3d86e8467fbd9b3a9dcb47e3fd_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Odense Denmark Literary">
+                        <div class="card-body">
+                            <h3 class="card-title">Odense Denmark Literary</h3>
+                            <p class="card-text text-muted">nøgleringe | Odense</p>
+                            <a href="products/odense-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/randers_denmark_domes_keychain-rf53db005dcab468f850c3d0ae5133e29_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Randers Denmark Domes">
+                        <div class="card-body">
+                            <h3 class="card-title">Randers Denmark Domes</h3>
+                            <p class="card-text text-muted">nøgleringe | Randers</p>
+                            <a href="products/randers-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/roskilde_denmark_cathedral_keychain-rd92613dd65a34d299b5408b9170b0221_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Roskilde Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Roskilde Denmark Cathedral</h3>
+                            <p class="card-text text-muted">nøgleringe | Roskilde</p>
+                            <a href="products/roskilde-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/silkeborg_denmark_lake_keychain-r99fbe31bddb243e7987fb58d46d38150_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Silkeborg Denmark Lake">
+                        <div class="card-body">
+                            <h3 class="card-title">Silkeborg Denmark Lake</h3>
+                            <p class="card-text text-muted">nøgleringe | Silkeborg</p>
+                            <a href="products/silkeborg-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/slagelse_denmark_tower_keychain-r44d88c268c4f49a6be5457f610561f4a_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Slagelse Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Slagelse Denmark Tower</h3>
+                            <p class="card-text text-muted">nøgleringe | Slagelse</p>
+                            <a href="products/slagelse-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/svendborg_denmark_castle_keychain-rdebd3e82cbc946d3858150a4bf90af3d_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Svendborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Svendborg Denmark Castle</h3>
+                            <p class="card-text text-muted">nøgleringe | Svendborg</p>
+                            <a href="products/svendborg-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/taastrup_denmark_tower_keychain-rc0ffc4e150df4ba89ac67a7dda26f765_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Taastrup Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Taastrup Denmark Tower</h3>
+                            <p class="card-text text-muted">nøgleringe | Taastrup</p>
+                            <a href="products/taastrup-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/viborg_denmark_cathedral_keychain-r3addc01b34754f42bb24cec2b316135c_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Viborg Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Viborg Denmark Cathedral</h3>
+                            <p class="card-text text-muted">nøgleringe | Viborg</p>
+                            <a href="products/viborg-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="nøgleringe">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsholm_denmark_church_keychain-r51d12a730b57420e8536884aef3dad43_c01k3_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hørsholm Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hørsholm Denmark Church</h3>
+                            <p class="card-text text-muted">nøgleringe | Hørsholm</p>
+                            <a href="products/horsholm-danmark-nogleringe.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsholm_denmark_church_sticker-ra79b444401ce41389ae322463fd45a60_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hørsholm Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hørsholm Denmark Church</h3>
+                            <p class="card-text text-muted">klistermærker | Hørsholm</p>
+                            <a href="products/horsholm-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/viborg_denmark_cathedral_sticker-ra87227f19dad4e2f8a34b8dbceaa1fef_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Viborg Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Viborg Denmark Cathedral</h3>
+                            <p class="card-text text-muted">klistermærker | Viborg</p>
+                            <a href="products/viborg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/vejle_denmark_bridge_sticker-r2adeb0321b974ee181e8c92bbb0f024a_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Vejle Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Vejle Denmark Bridge</h3>
+                            <p class="card-text text-muted">klistermærker | Vejle</p>
+                            <a href="products/vejle-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/taastrup_denmark_tower_sticker-r027fb9db065a4697a91f685c2d5244e5_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Taastrup Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Taastrup Denmark Tower</h3>
+                            <p class="card-text text-muted">klistermærker | Taastrup</p>
+                            <a href="products/taastrup-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/svendborg_denmark_castle_sticker-rb4172b1144a340688104161124a235aa_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Svendborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Svendborg Denmark Castle</h3>
+                            <p class="card-text text-muted">klistermærker | Svendborg</p>
+                            <a href="products/svendborg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/sonderborg_denmark_castle_sticker-r5521fc8cc7f64261837d0226a710f579_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Sønderborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Sønderborg Denmark Castle</h3>
+                            <p class="card-text text-muted">klistermærker | Sønderborg</p>
+                            <a href="products/sonderborg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/slagelse_denmark_tower_sticker-r380ea2a932414dd4bb583771b95eb3b4_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Slagelse Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Slagelse Denmark Tower</h3>
+                            <p class="card-text text-muted">klistermærker | Slagelse</p>
+                            <a href="products/slagelse-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/silkeborg_denmark_lake_sticker-r4b28ade11960401d8053c9d4c10714db_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Silkeborg Denmark Lake">
+                        <div class="card-body">
+                            <h3 class="card-title">Silkeborg Denmark Lake</h3>
+                            <p class="card-text text-muted">klistermærker | Silkeborg</p>
+                            <a href="products/silkeborg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/roskilde_denmark_cathedral_sticker-r8402f164e98b4b5bb2c881ea573c5144_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Roskilde Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Roskilde Denmark Cathedral</h3>
+                            <p class="card-text text-muted">klistermærker | Roskilde</p>
+                            <a href="products/roskilde-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/randers_denmark_domes_sticker-red90636cee7e4a13b2c1847023008b7a_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Randers Denmark Domes">
+                        <div class="card-body">
+                            <h3 class="card-title">Randers Denmark Domes</h3>
+                            <p class="card-text text-muted">klistermærker | Randers</p>
+                            <a href="products/randers-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/odense_denmark_literary_sticker-rd6b68278e45d4dee8d91ce6237d2a9b5_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Odense Denmark Literary">
+                        <div class="card-body">
+                            <h3 class="card-title">Odense Denmark Literary</h3>
+                            <p class="card-text text-muted">klistermærker | Odense</p>
+                            <a href="products/odense-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/norresundby_denmark_bridge_sticker-r7bf1969f66d44fae87943f7e987956e4_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Nørresundby Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Nørresundby Denmark Bridge</h3>
+                            <p class="card-text text-muted">klistermærker | Nørresundby</p>
+                            <a href="products/norresundby-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/naestved_denmark_church_sticker-rda9bd65ba3064a57b91d6e9f82efd559_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Næstved Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Næstved Denmark Church</h3>
+                            <p class="card-text text-muted">klistermærker | Næstved</p>
+                            <a href="products/nastved-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kolding_denmark_castle_sticker-r1667ea859da64232892034a801eecc61_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Kolding Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Kolding Denmark Castle</h3>
+                            <p class="card-text text-muted">klistermærker | Kolding</p>
+                            <a href="products/kolding-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/herning_denmark_modern_art_sticker-r0803da77e4a9452f956d5afd064490c0_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Herning Denmark Modern Art">
+                        <div class="card-body">
+                            <h3 class="card-title">Herning Denmark Modern Art</h3>
+                            <p class="card-text text-muted">klistermærker | Herning</p>
+                            <a href="products/herning-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hillerod_castle_denmark_sticker-reda0695d4d5e42a49a1a476266ee1ef7_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hillerød Castle Denmark">
+                        <div class="card-body">
+                            <h3 class="card-title">Hillerød Castle Denmark</h3>
+                            <p class="card-text text-muted">klistermærker | Hillerød</p>
+                            <a href="products/hillerod-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hjorring_denmark_church_sticker-rb70523e657e74359848d10ce3d1fa179_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Hjørring Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hjørring Denmark Church</h3>
+                            <p class="card-text text-muted">klistermærker | Hjørring</p>
+                            <a href="products/hjorring-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/holstebro_denmark_giacometti_sticker-r3c1710ee9f3e4d988ebe226367d6ea82_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Holstebro Denmark Giacometti">
+                        <div class="card-body">
+                            <h3 class="card-title">Holstebro Denmark Giacometti</h3>
+                            <p class="card-text text-muted">klistermærker | Holstebro</p>
+                            <a href="products/holstebro-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kobenhavn_nyhavn_harbor_sticker-r38912014a76d44f887c90bff0c71c1f4_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="København Nyhavn Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">København Nyhavn Harbor</h3>
+                            <p class="card-text text-muted">klistermærker | København</p>
+                            <a href="products/kobenhavn-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/koge_denmark_old_town_sticker-rc45ee2cfa01149e8aa1e0b17a2bfe59f_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Køge Denmark Old Town">
+                        <div class="card-body">
+                            <h3 class="card-title">Køge Denmark Old Town</h3>
+                            <p class="card-text text-muted">klistermærker | Køge</p>
+                            <a href="products/koge-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/fredericia_denmark_soldier_sticker-r1da4ac334c0945b8ae3a50778df6366b_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Fredericia Denmark Soldier">
+                        <div class="card-body">
+                            <h3 class="card-title">Fredericia Denmark Soldier</h3>
+                            <p class="card-text text-muted">klistermærker | Fredericia</p>
+                            <a href="products/fredericia-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/esbjerg_man_meets_sea_sticker-r451b6edbe93b49b6831738dea78ee38c_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Esbjerg Man Meets Sea">
+                        <div class="card-body">
+                            <h3 class="card-title">Esbjerg Man Meets Sea</h3>
+                            <p class="card-text text-muted">klistermærker | Esbjerg</p>
+                            <a href="products/esbjerg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aarhus_denmark_cityscape_sticker-r34a17fd7b72a4da49609c21b1bde7be4_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Aarhus Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aarhus Denmark Cityscape</h3>
+                            <p class="card-text text-muted">klistermærker | Aarhus</p>
+                            <a href="products/aarhus-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="klistermærker">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aalborg_denmark_cityscape_sticker-re6087525b13c4e1cb5bc414b86f478d7_wshutb_1024.jpg?rlvnet=1&max_dim=325" class="card-img-top" alt="Aalborg Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aalborg Denmark Cityscape</h3>
+                            <p class="card-text text-muted">klistermærker | Aalborg</p>
+                            <a href="products/aalborg-danmark-klistermarker.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsholm_denmark_church_t_shirt-r9f54428a87a84f35826b144f157d7149_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Hørsholm Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hørsholm Denmark Church</h3>
+                            <p class="card-text text-muted">t-shirts | Hørsholm</p>
+                            <a href="products/horsholm-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/viborg_denmark_cathedral_t_shirt-r4142f86f7af942c684242d3850995f1b_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Viborg Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Viborg Denmark Cathedral</h3>
+                            <p class="card-text text-muted">t-shirts | Viborg</p>
+                            <a href="products/viborg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/vejle_denmark_bridge_t_shirt-rf1cb4ceeb8de4765bb6ccf116e4c328f_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Vejle Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Vejle Denmark Bridge</h3>
+                            <p class="card-text text-muted">t-shirts | Vejle</p>
+                            <a href="products/vejle-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/taastrup_denmark_tower_t_shirt-r6aa8ebcb9a354b63a68527206e999ab6_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Taastrup Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Taastrup Denmark Tower</h3>
+                            <p class="card-text text-muted">t-shirts | Taastrup</p>
+                            <a href="products/taastrup-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/svendborg_denmark_castle_t_shirt-r3b143de17a1746bf8a32e21f2d89d76d_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Svendborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Svendborg Denmark Castle</h3>
+                            <p class="card-text text-muted">t-shirts | Svendborg</p>
+                            <a href="products/svendborg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/sonderborg_denmark_castle_t_shirt-r819d8f1e615c4bc6a3661069f0d99b33_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Sønderborg Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Sønderborg Denmark Castle</h3>
+                            <p class="card-text text-muted">t-shirts | Sønderborg</p>
+                            <a href="products/sonderborg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/slagelse_denmark_tower_t_shirt-r4d352ac6d3a04a819c6c8e7ed6940bef_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Slagelse Denmark Tower">
+                        <div class="card-body">
+                            <h3 class="card-title">Slagelse Denmark Tower</h3>
+                            <p class="card-text text-muted">t-shirts | Slagelse</p>
+                            <a href="products/slagelse-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/silkeborg_denmark_lake_t_shirt-r4ca5c2059b5141ff883fc15e71a0b080_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Silkeborg Denmark Lake">
+                        <div class="card-body">
+                            <h3 class="card-title">Silkeborg Denmark Lake</h3>
+                            <p class="card-text text-muted">t-shirts | Silkeborg</p>
+                            <a href="products/silkeborg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/roskilde_denmark_cathedral_t_shirt-r4f6a09ab194c42469e3a6ed0d1f3058c_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Roskilde Denmark Cathedral">
+                        <div class="card-body">
+                            <h3 class="card-title">Roskilde Denmark Cathedral</h3>
+                            <p class="card-text text-muted">t-shirts | Roskilde</p>
+                            <a href="products/roskilde-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/randers_denmark_domes_t_shirt-rcc80a66034a0419d989f70e5d5f41f0e_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Randers Denmark Domes">
+                        <div class="card-body">
+                            <h3 class="card-title">Randers Denmark Domes</h3>
+                            <p class="card-text text-muted">t-shirts | Randers</p>
+                            <a href="products/randers-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/odense_denmark_literary_t_shirt-r3cffe915af4c405186cea9a68bf6081e_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Odense Denmark Literary">
+                        <div class="card-body">
+                            <h3 class="card-title">Odense Denmark Literary</h3>
+                            <p class="card-text text-muted">t-shirts | Odense</p>
+                            <a href="products/odense-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/norresundby_denmark_bridge_t_shirt-r3f852d83375b40baae3d5538a53735c5_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Nørresundby Denmark Bridge">
+                        <div class="card-body">
+                            <h3 class="card-title">Nørresundby Denmark Bridge</h3>
+                            <p class="card-text text-muted">t-shirts | Nørresundby</p>
+                            <a href="products/norresundby-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/naestved_denmark_church_t_shirt-racadc609968c4ec385942ced03441851_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Næstved Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Næstved Denmark Church</h3>
+                            <p class="card-text text-muted">t-shirts | Næstved</p>
+                            <a href="products/nastved-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kolding_denmark_castle_t_shirt-re56d568fec404313a4099433a7805c37_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Kolding Denmark Castle">
+                        <div class="card-body">
+                            <h3 class="card-title">Kolding Denmark Castle</h3>
+                            <p class="card-text text-muted">t-shirts | Kolding</p>
+                            <a href="products/kolding-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/koge_denmark_old_town_t_shirt-rc45a2f5d48f74b16b0fcf2f0e23e1ae4_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Køge Denmark Old Town">
+                        <div class="card-body">
+                            <h3 class="card-title">Køge Denmark Old Town</h3>
+                            <p class="card-text text-muted">t-shirts | Køge</p>
+                            <a href="products/koge-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/kobenhavn_nyhavn_harbor_t_shirt-r89864462c6204151bb03874521480b2f_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="København Nyhavn Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">København Nyhavn Harbor</h3>
+                            <p class="card-text text-muted">t-shirts | København</p>
+                            <a href="products/kobenhavn-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/horsens_denmark_harbor_t_shirt-r66e908d883364ebba1dba8ce350008b7_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Horsens Denmark Harbor">
+                        <div class="card-body">
+                            <h3 class="card-title">Horsens Denmark Harbor</h3>
+                            <p class="card-text text-muted">t-shirts | Horsens</p>
+                            <a href="products/horsens-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/holstebro_denmark_giacometti_t_shirt-r64718d8d5bc749a98eddb9499da54e28_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Holstebro Denmark Giacometti">
+                        <div class="card-body">
+                            <h3 class="card-title">Holstebro Denmark Giacometti</h3>
+                            <p class="card-text text-muted">t-shirts | Holstebro</p>
+                            <a href="products/holstebro-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hjorring_denmark_church_t_shirt-r59cfa27a27104a43b9a39ea1760b9b85_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Hjørring Denmark Church">
+                        <div class="card-body">
+                            <h3 class="card-title">Hjørring Denmark Church</h3>
+                            <p class="card-text text-muted">t-shirts | Hjørring</p>
+                            <a href="products/hjorring-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/hillerod_castle_denmark_t_shirt-r0bfb261a4cde41fc8b789c61b5221905_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Hillerød Castle Denmark">
+                        <div class="card-body">
+                            <h3 class="card-title">Hillerød Castle Denmark</h3>
+                            <p class="card-text text-muted">t-shirts | Hillerød</p>
+                            <a href="products/hillerod-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/herning_denmark_modern_art_t_shirt-r19c6bf13d5204f52b83b9fdb81f5afad_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Herning Denmark Modern Art">
+                        <div class="card-body">
+                            <h3 class="card-title">Herning Denmark Modern Art</h3>
+                            <p class="card-text text-muted">t-shirts | Herning</p>
+                            <a href="products/herning-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/fredericia_denmark_soldier_t_shirt-r68e8111e0c664f3b97a35fc4d86da86d_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Fredericia Denmark Soldier">
+                        <div class="card-body">
+                            <h3 class="card-title">Fredericia Denmark Soldier</h3>
+                            <p class="card-text text-muted">t-shirts | Fredericia</p>
+                            <a href="products/fredericia-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/esbjerg_man_meets_sea_t_shirt-r983cc7bb4a034ec8a8a89f7293de5ffc_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Esbjerg Man Meets Sea">
+                        <div class="card-body">
+                            <h3 class="card-title">Esbjerg Man Meets Sea</h3>
+                            <p class="card-text text-muted">t-shirts | Esbjerg</p>
+                            <a href="products/esbjerg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aarhus_denmark_cityscape_t_shirt-r1795bd6685a440a3aed3acbb71b56070_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Aarhus Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aarhus Denmark Cityscape</h3>
+                            <p class="card-text text-muted">t-shirts | Aarhus</p>
+                            <a href="products/aarhus-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3 product-item" data-type="t-shirts">
+                    <div class="card h-100">
+                        <img src="https://rlv.zcache.com/aalborg_denmark_cityscape_t_shirt-r8a2b8e77bfce4b40aba34628f24c0bce_jgsdi_1024.jpg?max_dim=325" class="card-img-top" alt="Aalborg Denmark Cityscape">
+                        <div class="card-body">
+                            <h3 class="card-title">Aalborg Denmark Cityscape</h3>
+                            <p class="card-text text-muted">t-shirts | Aalborg</p>
+                            <a href="products/aalborg-danmark-tshirts.html" class="btn btn-primary">Se produkt</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-5" id="noResults" style="display: none;">
+                <div class="p-5 bg-light rounded">
+                    <h4 class="text-muted">Ingen produkter fundet</h4>
+                    <p class="text-muted">Prøv at søge efter et andet ord eller fjern nogle filtre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Danske Souvenirs. Alle rettigheder forbeholdes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productItems = document.querySelectorAll('.product-item');
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const searchInput = document.getElementById('searchInput');
+            const noResults = document.getElementById('noResults');
+            
+            // وظيفة التصفية
+            function filterProducts(filter) {
+                filterButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === filter);
+                });
+                
+                let hasResults = false;
+                
+                productItems.forEach(item => {
+                    const matchesType = filter === 'all' || item.dataset.type === filter;
+                    const matchesSearch = !searchInput.value || 
+                        item.querySelector('.card-title').textContent.toLowerCase().includes(
+                            searchInput.value.toLowerCase()
+                        );
+                    
+                    if (matchesType && matchesSearch) {
+                        item.style.display = 'block';
+                        hasResults = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                noResults.style.display = hasResults ? 'none' : 'block';
+            }
+            
+            // معالجة أحداث الضغط على الأزرار
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterProducts(button.dataset.filter);
+                });
+            });
+            
+            // معالجة البحث
+            searchInput.addEventListener('input', () => {
+                const activeFilter = document.querySelector('.btn-filter.active').dataset.filter;
+                filterProducts(activeFilter);
+            });
+            
+            // بدء مع عرض جميع المنتجات
+            filterProducts('all');
+        });
+    </script>
+</body>
+</html>
