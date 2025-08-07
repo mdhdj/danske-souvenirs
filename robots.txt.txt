@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mdhdj.github.io/danske-souvenirs/sitemap.xml
