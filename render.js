@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
                              class="card-img-top" 
                              alt="${product.name}" 
                              loading="lazy"
-                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
+                             onerror="this.style.opacity='0.7'; this.style.filter='grayscale(100%)'; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
                     </div>
                     <div class="card-body d-flex flex-column">
                         <div class="mb-2">
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="${url}" class="btn btn-danger btn-sm" target="_blank" rel="noopener noreferrer">
                                 <i class="bi bi-cart-plus me-1"></i> Køb nu
                             </a>
-                            <button class="btn btn-outline-secondary btn-sm view-details" data-id="${product.id}">
+                            <a href="./products/${product.id}.html" class="btn btn-outline-secondary btn-sm">
                                 <i class="bi bi-eye me-1"></i> Detaljer
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -198,9 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (event.key === 'Enter') {
                     handleSearch();
                 }
-                // Real-time search (optional - uncomment if desired)
-                // clearTimeout(this.searchTimeout);
-                // this.searchTimeout = setTimeout(handleSearch, 300);
             });
             console.log('Search event listeners set up');
         }
@@ -223,16 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             console.log('Filter event listeners set up');
         }
-        
-        // Product detail view
-        document.addEventListener('click', function(event) {
-            if (event.target.closest('.view-details')) {
-                const button = event.target.closest('.view-details');
-                const productId = button.dataset.id;
-                console.log('View details clicked for product:', productId);
-                showProductDetails(productId);
-            }
-        });
         
         // Contact form
         if (contactForm) {
@@ -283,81 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error filtering products:', error);
             showError(new Error('Failed to filter products'));
         }
-    }
-    
-    function showProductDetails(productId) {
-        console.log('Showing product details for:', productId);
-        const product = products.find(p => p.id === productId);
-        if (!product) {
-            console.error('Product not found:', productId);
-            alert('Product not found');
-            return;
-        }
-        
-        const typeLabel = getProductTypeLabel(product.type);
-        const location = product.location || 'Unknown';
-        const description = product.description || 'No description available';
-        const url = product.url || '#';
-        const keywords = product.keywords || [];
-        
-        // Create modal HTML
-        const modalHTML = `
-            <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="productModalLabel">${product.name}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="${product.image}" 
-                                         class="img-fluid rounded" 
-                                         alt="${product.name}"
-                                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <span class="badge bg-danger text-white me-2">${typeLabel}</span>
-                                        <span class="badge bg-secondary text-white">${location}</span>
-                                    </div>
-                                    <p>${description}</p>
-                                    ${keywords.length > 0 ? `
-                                    <div class="mb-3">
-                                        <h6>Populære søgeord:</h6>
-                                        <div class="d-flex flex-wrap gap-1">
-                                            ${keywords.map(keyword => `<span class="badge bg-light text-dark">${keyword}</span>`).join('')}
-                                        </div>
-                                    </div>
-                                    ` : ''}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Luk</button>
-                            <a href="${url}" class="btn btn-danger" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-cart-plus me-1"></i> Køb nu
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        // Add modal to DOM
-        const modalContainer = document.createElement('div');
-        modalContainer.innerHTML = modalHTML;
-        document.body.appendChild(modalContainer);
-        
-        // Show modal
-        const modal = new bootstrap.Modal(document.getElementById('productModal'));
-        modal.show();
-        
-        // Remove modal from DOM when hidden
-        document.getElementById('productModal').addEventListener('hidden.bs.modal', function() {
-            modalContainer.remove();
-        });
     }
     
     function handleFormSubmit() {
@@ -449,4 +361,3 @@ document.addEventListener('DOMContentLoaded', function() {
         init();
     };
 });
-
