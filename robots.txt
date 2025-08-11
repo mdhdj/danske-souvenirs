@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 Sitemap: https://mdhdj.github.io/danske-souvenirs/sitemap.xml
+=======
+Sitemap: https://mdhdj.github.io/danske-souvenirs/sitemap.xml
+>>>>>>> 501a7961565995066709643b6ee1bbe331cad93b

@@ -76,7 +76,8 @@ const headerTemplate = `<!DOCTYPE html>
       "offers": {
         "@type": "Offer",
         "url": "{{PRODUCT_URL}}",
-        "priceCurrency": "DKK",
+        "priceCurrency": "{{PRODUCT_CURRENCY}}",
+        "price": "{{PRODUCT_PRICE}}",
         "availability": "https://schema.org/InStock"
       }
     }
@@ -124,44 +125,47 @@ const breadcrumbTemplate = `    <!-- Breadcrumb -->
         </nav>
     </div>`;
 
-const productTemplate = `    <!-- Product Detail Section -->
-    <section class="product-detail-section py-5">
+const productTemplate = `    <!-- Product Section -->
+    <section class="py-5">
         <div class="container">
-            <div class="product-detail-container">
-                <div class="row g-0">
-                    <div class="col-md-6">
-                        <div class="product-detail-image">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-img-container">
                             <img src="{{PRODUCT_IMAGE}}" 
-                                 class="img-fluid" 
+                                 class="card-img-top" 
                                  alt="{{PRODUCT_NAME}}"
-                                 loading="lazy"
-                                 onerror="this.style.opacity='0.7'; this.style.filter='grayscale(100%)'; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
                         </div>
                     </div>
-                    <div class="col-md-6 product-detail-info">
-                        <h1 class="fw-bold text-danger">{{PRODUCT_NAME}}</h1>
-                        <div class="mb-3">
-                            <span class="badge bg-danger text-white me-2">{{PRODUCT_TYPE_LABEL}}</span>
-                            <span class="badge bg-secondary text-white">{{PRODUCT_LOCATION}}</span>
-                        </div>
-                        <p class="lead">{{PRODUCT_DESCRIPTION}}</p>
-                        {{PRODUCT_KEYWORDS_SECTION}}
-                        <div class="product-actions d-flex flex-column flex-sm-row gap-3">
-                            <a href="{{PRODUCT_URL}}" class="btn btn-danger btn-lg" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-cart-plus me-2"></i> Køb nu
-                            </a>
-                            <a href="../index.html#produkter" class="btn btn-outline-secondary btn-lg">
-                                <i class="bi bi-arrow-left me-2"></i> Tilbage til produkter
-                            </a>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="fw-bold text-danger mb-3">{{PRODUCT_NAME}}</h1>
+                    <div class="mb-3">
+                        <span class="badge bg-danger text-white me-2">{{PRODUCT_TYPE_LABEL}}</span>
+                        <span class="badge bg-secondary text-white">{{PRODUCT_LOCATION}}</span>
+                    </div>
+                    
+                    <!-- عرض السعر بشكل واضح -->
+                    {{PRODUCT_PRICE_SECTION}}
+                    
+                    <p class="lead">{{PRODUCT_DESCRIPTION}}</p>
+                    {{PRODUCT_KEYWORDS_SECTION}}
+                    <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                        <a href="{{PRODUCT_URL}}" class="btn btn-danger btn-lg" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-cart-plus me-2"></i> Køb nu
+                        </a>
+                        <a href="../index.html#produkter" class="btn btn-outline-secondary btn-lg">
+                            <i class="bi bi-arrow-left me-2"></i> Tilbage til produkter
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>`;
 
-const relatedProductsTemplate = `    <!-- Related Products Section -->
-    <section class="related-products-section">
+const relatedProductsTemplate = `    <!-- Related Products -->
+    <section class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5 fw-bold text-danger">Relaterede Produkter</h2>
             <div class="row g-4">
@@ -204,15 +208,35 @@ function getProductTypeLabel(type) {
     return typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1);
 }
 
+// دالة لإنشاء قسم السعر بشكل واضح
+function createPriceSection(product) {
+    if (!product.priceEUR) return '';
+    
+    return `
+    <div class="mb-4 p-3 bg-light rounded">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h4 class="mb-0">Pris:</h4>
+                <div class="h3 text-danger fw-bold">€${product.priceEUR}</div>
+            </div>
+            <div class="text-end">
+                <div class="small text-muted">
+                    <i class="bi bi-info-circle me-1"></i> Priserne kan være lavere hos sælgeren
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
 // دالة لإنشاء قسم الكلمات المفتاحية
 function createKeywordsSection(keywords) {
     if (!keywords || !Array.isArray(keywords) || keywords.length === 0) return '';
     
     return `
-    <div class="product-keywords">
+    <div class="mb-4">
         <h5>Populære søgeord:</h5>
-        <div class="d-flex flex-wrap">
-            ${keywords.map(keyword => `<span class="badge">${keyword}</span>`).join('')}
+        <div class="d-flex flex-wrap gap-2 mt-2">
+            ${keywords.map(keyword => `<span class="badge bg-light text-dark">${keyword}</span>`).join('')}
         </div>
     </div>`;
 }
@@ -231,13 +255,12 @@ function createRelatedProducts(currentProduct, allProducts) {
     
     return related.map(product => `
         <div class="col-md-4">
-            <div class="related-product-card">
+            <div class="card h-100 shadow-sm">
                 <div class="card-img-container">
                     <img src="${product.image}" 
                          class="card-img-top" 
                          alt="${product.name}"
-                         loading="lazy"
-                         onerror="this.style.opacity='0.7'; this.style.filter='grayscale(100%)'; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
                 </div>
                 <div class="card-body">
                     <div class="mb-2">
@@ -245,8 +268,8 @@ function createRelatedProducts(currentProduct, allProducts) {
                         <span class="badge bg-secondary text-white">${product.location}</span>
                     </div>
                     <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">${product.description || 'Ingen beskrivelse tilgængelig'}</p>
-                    <a href="${product.id}.html" class="btn btn-outline-danger">Se detaljer</a>
+                    ${product.priceEUR ? `<div class="text-danger fw-bold mb-2">€${product.priceEUR}</div>` : ''}
+                    <a href="${product.id}.html" class="btn btn-sm btn-outline-danger">Se detaljer</a>
                 </div>
             </div>
         </div>
@@ -284,7 +307,9 @@ productsData.products.forEach(product => {
         .replace(/{{PRODUCT_DESCRIPTION}}/g, product.description)
         .replace(/{{PRODUCT_KEYWORDS}}/g, (product.keywords || []).join(', '))
         .replace(/{{PRODUCT_IMAGE}}/g, product.image)
-        .replace(/{{PRODUCT_URL}}/g, product.url);
+        .replace(/{{PRODUCT_URL}}/g, product.url)
+        .replace(/{{PRODUCT_PRICE}}/g, product.priceEUR || '')
+        .replace(/{{PRODUCT_CURRENCY}}/g, product.priceCurrency || 'EUR');
     
     const breadcrumb = breadcrumbTemplate.replace(/{{PRODUCT_NAME}}/g, product.name);
     
@@ -295,6 +320,7 @@ productsData.products.forEach(product => {
         .replace(/{{PRODUCT_TYPE_LABEL}}/g, getProductTypeLabel(product.type))
         .replace(/{{PRODUCT_LOCATION}}/g, product.location)
         .replace(/{{PRODUCT_URL}}/g, product.url)
+        .replace(/{{PRODUCT_PRICE_SECTION}}/g, createPriceSection(product))
         .replace(/{{PRODUCT_KEYWORDS_SECTION}}/g, createKeywordsSection(product.keywords));
     
     const relatedProducts = relatedProductsTemplate
