@@ -22,21 +22,15 @@ const prices = {
     "phone-case": 13.64
 };
 
-// تعديل كل منتج
+// تعديل كل منتج (تحديث الأسعار فقط دون تعديل الوصف)
 data.products = data.products.map(product => {
     let priceEUR = prices[product.type] || null;
-    
-    // إضافة ملاحظة عن الأسعار في الوصف
-    const priceNote = " (Bemærk: Priserne kan være lavere til tider afhængigt af sælgeren)";
-    const updatedDescription = product.description.includes(priceNote) 
-        ? product.description 
-        : product.description + priceNote;
     
     return {
         ...product,
         priceEUR: priceEUR ? priceEUR.toFixed(2) : null,
-        priceCurrency: "EUR",
-        description: updatedDescription
+        priceCurrency: "EUR"
+        // لم نعد إضافة أي جملة للوصف
     };
 });
 
@@ -45,3 +39,4 @@ fs.writeFileSync('products.json', JSON.stringify(data, null, 2), 'utf8');
 
 console.log("✅ تم تحديث المنتجات بأسعار اليورو بنجاح!");
 console.log(`📊 تم تحديث ${data.products.length} منتج`);
+console.log("💡 ملاحظة: لم تتم إضافة أي جمل جديدة للأوصاف");
